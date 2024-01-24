@@ -20,6 +20,8 @@ public class Entreprise {
 		
 	}
 	
+	
+	
 	public Entreprise(int id, String nom, Date dateCreation) {
 		super();
 		this.id = id;

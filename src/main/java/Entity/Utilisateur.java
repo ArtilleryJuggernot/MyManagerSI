@@ -2,17 +2,29 @@ package Entity;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.NaturalId;
 
 @Entity
 @Table(name = "utilisateur")
 public class Utilisateur {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ID;
 	private String Nom;
+	
+	
+	@NaturalId
+    @Column(name = "Email")
 	private String Email;
+	
+	
 	private String Password;
 	private Date create_at;
 	private Date last_co;
@@ -26,10 +38,10 @@ public class Utilisateur {
 	public Utilisateur(int iD, String nom, String email, String password, Date create_at, Date last_co,
 			int entreprise_id, int site_id, int type_compteID) {
 		super();
-		ID = iD;
-		Nom = nom;
-		Email = email;
-		Password = password;
+		this.ID = iD;
+		this.Email = email;
+		this.Nom = nom;
+		this.Password = password;
 		this.create_at = create_at;
 		this.last_co = last_co;
 		this.entreprise_id = entreprise_id;
@@ -37,8 +49,7 @@ public class Utilisateur {
 		Type_compteID = type_compteID;
 	}
 	
-	
-	
+
 	
 	
 	
