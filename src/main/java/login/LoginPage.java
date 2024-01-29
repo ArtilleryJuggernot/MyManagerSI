@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -15,7 +16,7 @@ public class LoginPage extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField EmailTXTfield;
-	private JTextField passwordTXTField;
+	private JPasswordField passwordTXTField;
 	private JButton ConnectBTN;
 	private JButton RegisterBTN;
 
@@ -62,11 +63,11 @@ public class LoginPage extends JFrame {
 		contentPane.add(EmailTXTfield);
 		EmailTXTfield.setColumns(10);
 		
-		passwordTXTField = new JTextField();
+		passwordTXTField = new JPasswordField();
 		passwordTXTField.setColumns(10);
 		passwordTXTField.setBounds(147, 147, 96, 20);
 		contentPane.add(passwordTXTField);
-		
+	
 		JLabel password = new JLabel("Password :");
 		password.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		password.setBounds(53, 148, 68, 14);

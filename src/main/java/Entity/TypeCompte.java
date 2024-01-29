@@ -31,7 +31,10 @@ public class TypeCompte {
 		super();
 	}
 	
-	
+	@Override
+	public String toString() {
+		return Libelle;
+	}
 	
 	
 	

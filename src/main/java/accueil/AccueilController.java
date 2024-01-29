@@ -20,6 +20,8 @@ import site.ControllerSite;
 import site.SiteManagerPage;
 import stock.StockController;
 import stock.StockPage;
+import user_manage.ManageUserController;
+import user_manage.ManageUserPage;
 import util.HibernateSessionFactory;
 
 
@@ -82,7 +84,7 @@ public class AccueilController {
     	f.getProfilButton().addActionListener(e -> onProfilButton());
     	f.getMaterialButton().addActionListener(e -> onMaterielButton());
     	f.getStockButton().addActionListener(e -> onStockButton());
-    	
+    	f.getAdminButton().addActionListener(e -> onAdminButton());
     }
     
     private void onSitesButton() {
@@ -103,6 +105,9 @@ public class AccueilController {
     	StockController c = new StockController(new StockPage(), user);
     }
     
+    private void onAdminButton() {
+    	ManageUserController c = new ManageUserController(new ManageUserPage(), user);
+    }
     
     
     

@@ -86,6 +86,11 @@ public class Site {
 	        session.close();
 	    }
 	}
+	
+	@Override
+	public String toString() {
+		return Libelle;
+	}
 
 	
 }
