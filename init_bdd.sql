@@ -338,3 +338,9 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2024-02-19 20:58:35
+
+
+CREATE USER 'mmsi'@'localhost' IDENTIFIED BY 'azerty123!!!';
+GRANT SELECT, INSERT, UPDATE, DELETE ON mmsi.* TO 'mmsi'@'localhost';
+FLUSH PRIVILEGES;
+
